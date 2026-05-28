@@ -8,11 +8,15 @@ jobs:
     steps:
     - name: checkout repo
       uses: action/checkout@v6
-      - name: welcome message
+      - name: welcome to read file
         run: echo "my first github action"
+             ls -ltra
+             cat README.md
+      - name: grenate
+        run: cowsay -f dargon "run coloer" >> dragon.txt       
 
-      - name: list the files
-        run: top 
+      #- name: list the files
+       # run: top 
 
-      - name: read file
-        run: cat README.md
+      #- name: read file
+        #run: cat README.md
