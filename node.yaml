@@ -12,5 +12,5 @@ steps:
   node-version: 18
 - name: Install dependencies
   uses: npm Install
-- name: build project
-  uses: npm build     
+- name: build project for Node jobs
+  uses: npm build 
