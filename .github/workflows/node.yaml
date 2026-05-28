@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Hello Steps
         run: |
-        echo "Welcome to GitHub"
-        echo " Hello Github"
+          echo "Welcome to GitHub"
+          echo " Hello Github"
