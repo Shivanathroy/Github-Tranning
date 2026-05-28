@@ -1,6 +1,8 @@
-name: Build Nginx Docker Image
+name: Docker Build
 
-on: push
+on:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -8,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Build Docker image
-        run: docker build -t my-nginx-app .
+        run: docker build -t myapp:latest .
