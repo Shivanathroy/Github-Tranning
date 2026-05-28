@@ -1,7 +1,6 @@
 name: Hello World
 
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
   Hello:
@@ -11,4 +10,4 @@ jobs:
       - name: Hello Steps
         run: |
           echo "Welcome to GitHub"
-          echo " welcome to githubactin"
+          echo " welcome to githubaction lernning"
