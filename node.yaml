@@ -1,16 +1,30 @@
 name: Node Build
-on: push
+name: CI Pipeline
+
+on:
+push:
+branches: [ "main" ]
+
 jobs:
 build:
-runs-on: ubuntu
+runs-on: ubuntu-latest
+
+```
 steps:
-- name: checkout
-  uses: action/checkout@v3
-- name: Installation of Node jobs
-  uses: action/setup-node@v3
-  with:
-  node-version: 18
-- name: Install dependencies
-  uses: npm Install
-- name: build project for Node jobs
-  uses: npm build 
+  - name: Checkout Code
+    uses: actions/checkout@v3
+
+  - name: Install Node.js
+    uses: actions/setup-node@v3
+    with:
+      node-version: 18
+
+  - name: Install Dependencies
+    run: npm install
+
+  - name: Run Tests
+    run: npm test
+
+  - name: Build Project
+    run: npm run build
+```
