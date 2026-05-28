@@ -1,0 +1,16 @@
+name: Node Build
+on: push
+jobs:
+build:
+runs-on: ubuntu
+steps:
+- name: checkout
+  uses: action/checkout@v3
+- name: Installation of Node jobs
+  uses: action/setup-node@v3
+  with:
+  node-version: 18
+- name: Install dependencies
+  uses: npm Install
+- name: build project
+  uses: npm build     
