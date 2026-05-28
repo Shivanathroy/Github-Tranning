@@ -1,17 +1,9 @@
-name: Simple CI
-
-on: push
-
+name: Hellp World
+on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Show files
-        run: ls -ltr
-
-      - name: Print message
-        run: echo "GitHub Actions working fine 🚀"
+Hello:
+runs-on: ubuntu-latets
+steps:
+- name: Hello Steps
+  run: echo " Welcome to Github" 
+  
